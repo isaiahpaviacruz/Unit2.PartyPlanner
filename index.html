@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Party Planner SPA</title>
+</head>
+<body>
+  <h1>Party Planner</h1>
+  <ul id="partyList">
+    <!-- Existing parties will be displayed here -->
+  </ul>
+  <form id="partyForm">
+    <label for="partyName">Name: </label>
+    <input type="text" id="partyName" required>
+    <label for="partyDate">Date: </label>
+    <input type="date" id="partyDate" required>
+    <label for="partyTime">Time: </label>
+    <input type="time" id="partyTime" required>
+    <label for="partyLocation">Location: </label>
+    <input type="text" id="partyLocation" required>
+    <label for="partyDescription">Description: </label>
+    <textarea id="partyDescription" required></textarea>
+    <button type="submit">Add Party</button>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
