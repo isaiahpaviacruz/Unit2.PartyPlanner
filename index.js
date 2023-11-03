@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const partyForm = document.getElementById('partyForm');
     const errorContainer = document.getElementById('errorContainer');
   
-    const API_URL = 'https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b';
+    const API_URL = 'https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b/events';
     const parties = [];
   
     async function fetchData() {
       try {
-        const response = await fetch('https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b');
+        const response = await fetch('https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b/events');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     async function addParty(name, date, time, location, description) {
       try {
-        const response = await fetch('https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b', {
+        const response = await fetch('https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b/events', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const partyId = parties[index]._id;
   
       try {
-        const response = await fetch(`https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b}`, {
+        const response = await fetch(`https://fsa-crud-2aa9294fe819.herokuapp.com/api/2308-acc-pt-web-pt-b/events}`, {
                       method: 'DELETE',
         });
         if (!response.ok) {
